@@ -1,5 +1,5 @@
-from construction_app.core.database.model_generator.create_models_from_db import generate_sqlmodels
-from construction_app.core.config import DATABASE_URL, MODEL_GEN_FILE_NAME
+from core.database.model_generator.create_models_from_db import generate_sqlmodels
+from core.config import DATABASE_URL, MODEL_GEN_FILE_NAME
 
 
 
