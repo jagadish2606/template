@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 from core.utils.middlewares import PaginationMiddleWare
 from endpoints.user import router as user_router
 from endpoints.employee import router as employee_router
+from endpoints.auth import router as auth_routes
+
 
 from core.config import ENVIRONMENT, DATABASE_URL
 from fastapi.middleware.cors import CORSMiddleware
@@ -31,6 +33,7 @@ app.add_middleware(
 )
 app.include_router(user_router, prefix='/users')
 app.include_router(employee_router, prefix='/Employee')  # Fixed typo
+app.include_router(auth_routes, prefix="/auth", tags=["Authentication"])
 
 
 
